@@ -47,10 +47,16 @@ if dein#load_state('/home/nbore/.random')
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  " Code completion
   call dein#add('Shougo/deoplete.nvim')
+  " Nice color scheme
   call dein#add('mhartington/oceanic-next')
+  " The status bar at the bottom
   call dein#add('vim-airline/vim-airline')
+  " Visualizing indent in python etc
   call dein#add('Yggdroot/indentLine')
+  " Git commands and shows the branch in airline
+  call dein#add('tpope/vim-fugitive')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -77,6 +83,16 @@ let g:python3_host_prog = '/usr/bin/python3'
 " Editor configuration--------------------------
 set number              " Show the line numbers on the left side.<Paste>
 set tabstop=4           " Render TABs using this many spaces.
+set splitright          " Always split to the right
+set splitbelow          " Always open new split below
+
+" Make moving between splits more like wm
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" Quit terminal mode by pressing ESC
+tnoremap <Esc> <C-\><C-n>
 
 " Plugin configuration--------------------------
 " Add deoplete completion
@@ -88,6 +104,8 @@ autocmd CompleteDone * pclose " To close preview window of deoplete automagicall
 " Airline
 let g:airline_theme='oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#branch#enabled = 1
 
 " IndentLine
 let g:indentLine_char='|'
