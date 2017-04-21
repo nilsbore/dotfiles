@@ -57,6 +57,8 @@ if dein#load_state('/home/nbore/.random')
   call dein#add('Yggdroot/indentLine')
   " Git commands and shows the branch in airline
   call dein#add('tpope/vim-fugitive')
+  " Python jedi autocomplete, load only for python files
+  call dein#add('zchee/deoplete-jedi', {'on_ft': 'python'})
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
