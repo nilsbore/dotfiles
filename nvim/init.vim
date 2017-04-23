@@ -110,7 +110,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#branch#enabled = 1
 
 " IndentLine
-let g:indentLine_char='|'
+let g:indentLine_char='·'
 let g:indentLine_color_gui = '#74818b'
 
 " Looks configuration--------------------------
