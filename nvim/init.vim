@@ -125,3 +125,7 @@ endif
 " Theme
 syntax enable
 colorscheme OceanicNext
+
+" Configure the windows
+let g:netrw_banner = 0
+au VimEnter * Lexplore 15
