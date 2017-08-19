@@ -133,4 +133,4 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 au VimEnter * Lexplore 15
 au VimEnter * if argc() > 0 | wincmd p | endif
-au bufenter * if winnr("$") == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" | q | endif
+" au bufenter * if winnr("$") == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" | q | endif
