@@ -122,6 +122,9 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
+" Enable mouse input
+set mouse=a
+
 " Theme
 syntax enable
 colorscheme OceanicNext
