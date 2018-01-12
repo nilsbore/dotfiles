@@ -129,6 +129,8 @@ set mouse=a
 syntax enable
 colorscheme OceanicNext
 
+hi VertSplit cterm=underline ctermfg=243 ctermbg=243 gui=reverse guifg=#343d46 guibg=#343d46
+"hi LineNr ctermfg=243 ctermbg=235 guifg=#65737e guibg=#1b2b34
 hi EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
 " Configure the windows and netrw pane
