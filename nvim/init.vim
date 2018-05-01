@@ -59,6 +59,8 @@ if dein#load_state('/home/nbore/.random')
   call dein#add('tpope/vim-fugitive')
   " Python jedi autocomplete, load only for python files
   call dein#add('zchee/deoplete-jedi', {'on_ft': 'python'})
+  " Cpp clang autocomplete, load only for cpp files
+  call dein#add('Shougo/deoplete-clangx', {'on_ft': 'cpp'})
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -82,6 +84,7 @@ endif
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
+
 " Editor configuration--------------------------
 set number              " Show the line numbers on the left side.<Paste>
 set tabstop=4           " Render TABs using this many spaces.
@@ -102,6 +105,18 @@ call deoplete#enable()
 
 autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 autocmd CompleteDone * pclose " To close preview window of deoplete automagically
+
+" Change clang binary path
+call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang-5.0')
+
+" Change clang options
+"call deoplete#custom#var('clangx', 'default_c_options', '')
+"call deoplete#custom#var('clangx', 'default_cpp_options', '')
+
+" Set up clang-format, note that you need to change path
+let g:clang_format_fallback_style='WebKit'
+map <C-F> :pyf /usr/share/clang/clang-format-5.0/clang-format.py<cr>
+imap <C-F> <c-o>:pyf /usr/share/clang/clang-format-5.0/clang-format.py<cr>
 
 " Airline
 let g:airline_theme='oceanicnext'
@@ -141,3 +156,4 @@ let g:netrw_list_hide = '.*\.swp$,.*\.pyc'
 au VimEnter * Lexplore 15
 au VimEnter * if argc() > 0 | wincmd p | endif
 " au bufenter * if winnr("$") == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" | q | endif
+
