@@ -86,10 +86,13 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 
 " Editor configuration--------------------------
+filetype plugin indent on
 set number              " Show the line numbers on the left side.<Paste>
 set tabstop=4           " Render TABs using this many spaces.
 set splitright          " Always split to the right
 set splitbelow          " Always open new split below
+set shiftwidth=4        " when indenting with '>', use 4 spaces width
+set expandtab           " On pressing tab, insert 4 spaces
 
 " Make moving between splits more like wm
 nnoremap <C-J> <C-W><C-J>
