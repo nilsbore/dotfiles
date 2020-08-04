@@ -35,6 +35,9 @@ cd $HOME
 
 # TODO: now you need to go the the settings and set the Nord profile as the default
 
+# Set up vundle for vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # This might cause problems and will therefor run last
 git clone --bare https://github.com/nilsbore/dotfiles.git $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
