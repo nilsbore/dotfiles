@@ -13,7 +13,7 @@ fc-cache -fv
 
 # Install fish shell, preferrably using apt
 # sudo dpkg -i fish*.deb
-sudo apt install fish
+sudo apt install fish tmux
 
 # Install oh-my-fish
 curl -L https://get.oh-my.fish | fish
