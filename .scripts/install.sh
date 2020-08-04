@@ -7,7 +7,8 @@ mkdir -p .fonts
 # https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete.ttf
 # https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.t
 # Copy to ~/.fonts
-wget -P .fonts https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.t
+#wget -P .fonts https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.t
+wget -P .fonts https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
 fc-cache -fv
 
 # Install fish shell, preferrably using apt
@@ -18,10 +19,10 @@ sudo apt install fish
 curl -L https://get.oh-my.fish | fish
 
 # Install bobthefish theme
-omf install bobthefish
+fish --command 'omf install bobthefish'
 
 # Install bass for sourcing bash environments
-omf install bass
+fish --command 'omf install bass'
 
 # Install the nord Gnome terminal theme
 sudo apt install dconf-tools dconf-gsettings-backend dconf-cli dconf-service uuid-runtime
