@@ -35,12 +35,10 @@ cd $HOME
 
 # TODO: now you need to go the the settings and set the Nord profile as the default
 
-# Set fish as the default shell
-chsh -s /usr/bin/fish
-
 # This might cause problems and will therefor run last
 git clone --bare https://github.com/nilsbore/dotfiles.git $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfiles config --local status.showUntrackedFiles no
-dotfiles checkout master
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout master
 
+# Set fish as the default shell
+chsh -s /usr/bin/fish
