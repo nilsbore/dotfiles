@@ -26,7 +26,7 @@ Go to gnome terminal settings and switch to the "Nord" profile
 as the default. In the Nord profile's configuration, switch
 to the `SauceCodePro Nerd Font Regular 12` font. If you would
 like to use another font, you need to use a nerd-patched font,
-e.g. from [the nerd fonts repo](200~https://github.com/ryanoasis/nerd-fonts).
+e.g. from [the nerd fonts repo](https://github.com/ryanoasis/nerd-fonts).
 
 ## 4. Switch to fish shell
 
