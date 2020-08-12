@@ -28,6 +28,9 @@ Plugin 'Yggdroot/indentLine'
 " See instructions at https://github.com/Valloric/YouCompleteMe#linux-64-bit
 Plugin 'Valloric/YouCompleteMe'
 
+" Git change visualization
+Plugin 'airblade/vim-gitgutter'
+
 " Don't forget to run :PluginInstall to get plugins
 
 " All of your Plugins must be added before the following line
@@ -77,6 +80,10 @@ let g:lightline = {
 let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#unicode_symbols = 1
 let g:lightline#bufferline#min_buffer_count = 1
+
+" Vim git-gutter config
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 
 " IndentLine
 let g:indentLine_char='·'
