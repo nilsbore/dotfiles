@@ -9,7 +9,9 @@ wget -P .fonts https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/
 fc-cache -fv
 
 # Install oh-my-fish
-curl -L https://get.oh-my.fish | fish
+#curl -L https://get.oh-my.fish | fish
+curl -L http://get.oh-my.fish > .installs/install_omf
+fish .installs/install_omf --noninteractive
 
 # Install bobthefish theme
 fish --command 'omf install bobthefish'
