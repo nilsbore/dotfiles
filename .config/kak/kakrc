@@ -14,6 +14,11 @@ plug "abstractlyZach/nord.kak" %{
     colorscheme nord
 }
 
+# Add powerline.kak statusbar
+plug "andreyorst/powerline.kak" config %{
+    powerline-start
+}
+
 # Width of a tab
 set-option global tabstop 4
 
@@ -24,7 +29,7 @@ set-option global indentwidth 4
 set-option global scrolloff 1,3
 
 # Display the status bar on top
-set-option global ui_options ncurses_status_on_top=true
+#set-option global ui_options ncurses_status_on_top=true
 
 # Display line numbers
 add-highlighter global/ number-lines -hlcursor
