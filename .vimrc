@@ -31,6 +31,10 @@ Plugin 'Valloric/YouCompleteMe'
 " Git change visualization
 Plugin 'airblade/vim-gitgutter'
 
+" Pollen syntax highlighting
+Plugin 'wlangstroth/vim-racket'
+Plugin 'otherjoel/vim-pollen'
+
 " Don't forget to run :PluginInstall to get plugins
 
 " All of your Plugins must be added before the following line
@@ -104,6 +108,24 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" For writing pollen commands
+imap <C-E> ◊
+
+" Setup file associations for pollen
+" Create an augroup if you don’t already have one
+augroup configgroup
+    autocmd!
+
+    "Set Pollen syntax for files with these extensions:
+    au! BufRead,BufNewFile *.pm set filetype=pollen
+    au! BufRead,BufNewFile *.pp set filetype=pollen
+    au! BufRead,BufNewFile *.ptree set filetype=pollen
+
+    " Suggested editor settings:
+    autocmd FileType pollen setlocal wrap      " Soft wrap (don't affect buffer)
+    autocmd FileType pollen setlocal linebreak " Wrap on word-breaks only
+augroup END
 
 " Configure the windows and netrw pane
 let g:netrw_banner = 0
