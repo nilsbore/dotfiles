@@ -36,7 +36,21 @@ Log out and in again for the change to take effect.
 chsh -s /usr/bin/fish
 ```
 
-## 5. Activate vim plugins
+## 5. Install helix editor
+
+Install [rust](https://www.rust-lang.org/tools/install).
+
+Then install helix:
+```
+git clone https://github.com/helix-editor/helix
+cd helix
+cargo install --path helix-term
+```
+
+And copy the runtime folder to config: `cp -r runtim ~/.config/helix`.
+Then install the python language server: `pip3 install 'python-lsp-server[all]'`.
+
+## 6. Activate vim plugins
 
 Open `vim`, type `:PluginInstall` and press `Enter`.
 This will install all `Vundle` plugins.
@@ -44,12 +58,12 @@ If you would like `YouCompleteMe` type completion,
 execute the `.scripts/install_ycm.sh` script,
 and restart `vim`.
 
-## 6. Activate tmux plugins
+## 7. Activate tmux plugins
 
 Open `tmux` and press `ctrl+B` and then `I`.
 This will install plugins using `tpm`.
 
-## 7. If using WSL
+## 8. If using WSL
 
 Install font from [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf) and choose SauceCodePro NF in Windows terminal.
 
