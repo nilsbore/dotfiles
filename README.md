@@ -47,7 +47,7 @@ cd helix
 cargo install --path helix-term
 ```
 
-And copy the runtime folder to config: `cp -r runtim ~/.config/helix`.
+And copy the runtime folder to config: `cp -r runtime ~/.config/helix`.
 Then install the python language server: `pip3 install 'python-lsp-server[all]'`.
 
 ## 6. Activate vim plugins
