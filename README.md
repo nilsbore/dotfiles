@@ -48,3 +48,9 @@ and restart `vim`.
 
 Open `tmux` and press `ctrl+B` and then `I`.
 This will install plugins using `tpm`.
+
+## 7. If using WSL
+
+Install font from [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf) and choose SauceCodePro NF in Windows terminal.
+
+Copy Nord colorscheme from [here](https://github.com/thismat/nord-windows-terminal/blob/main/nord.json) into your Windows terminal config file and choose as the colorscheme to use in the OS profile setting.
