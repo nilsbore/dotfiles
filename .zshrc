@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export COLORTERM=truecolor
+export PATH=$HOME/.local/bin:$PATH
 
 source $HOME/.cargo/env
 # export MANPATH="/usr/local/man:$MANPATH"
