@@ -75,6 +75,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export COLORTERM=truecolor
 
 source $HOME/.cargo/env
 # export MANPATH="/usr/local/man:$MANPATH"
